@@ -1,0 +1,25 @@
+.transaction_history
+{
+    width: 450px;
+    margin: 20px auto;
+    border: 1px solid rgb(83, 83, 83);
+}
+
+.cell
+{
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(83, 83, 83);
+    text-align: center;
+}
+thead .cell
+{
+    background-color: rgb(103, 117, 243);;
+}
+.cell:not(:last-child){
+    border-right: 1px solid rgb(83, 83, 83);;
+}
+
+.tbody:nth-child(2n){
+    background-color:  rgba(244, 243, 243, 0.933);
+}
