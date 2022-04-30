@@ -1,8 +1,12 @@
+import style from './Container/container.module.css';
 import { Profile } from './Profile';
+import { Statistics } from './Statistics';
 import user from '../data/user.json';
+import data from '../data/data.json';
 export const App = () => {
+  const title = 'Upload stats';
   return (
-    <div>
+    <div className={ style.container}>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -10,6 +14,9 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+      {title
+        ? <Statistics title={title} stats={data} />
+        : <Statistics stats={data} />}
     </div>
   );
 };

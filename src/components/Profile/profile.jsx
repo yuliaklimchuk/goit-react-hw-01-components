@@ -1,7 +1,7 @@
 import style from './profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => { 
-    return <div className={style.container}>
+    return <section className={style.profile}>
         <div className={style.descroption}>
             <img
                 src={ avatar}
@@ -26,5 +26,5 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <span className={style.quantity}>{stats.likes }</span>
             </li>
         </ul>
-    </div>
+    </section>
 }
