@@ -1,4 +1,5 @@
 import style from './profile.module.css';
+import PropTypes from "prop-types"
 
 export const Profile = ({ username, tag, location, avatar, stats }) => { 
     return <section className={style.profile}>
@@ -28,3 +29,11 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         </ul>
     </section>
 }
+
+Profile.propTypes = {
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.array,
+};
