@@ -9,7 +9,6 @@ import friends from '../data/friends.json'
 import transactions from '../data/transactions.json'
 
 export const App = () => {
-  const title = 'Upload stats';
   return (
     <div className={ style.container}>
       <Profile
@@ -19,9 +18,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      {title
-        ? <Statistics title={title} stats={data} />
-        : <Statistics stats={data} />}
+      <Statistics title='Upload stats' stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
     </div>
